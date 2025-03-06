@@ -1,13 +1,9 @@
-def is_prime(n):
-    if n <= 1:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
+def is_palindrome(s):
+    s = s.replace(" ", "").lower()  # видаляє пробіли та перетворює на малий регістр
+    return s == s[::-1]
 
-number = int(input("Введіть число для перевірки: "))
-if is_prime(number):
-    print(f"{number} є простим числом.")
+text = input("Введіть рядок для перевірки: ")
+if is_palindrome(text):
+    print(f"Рядок '{text}' є паліндромом.")
 else:
-    print(f"{number} не є простим числом.")
+    print(f"Рядок '{text}' не є паліндромом.")
