@@ -1,0 +1,8 @@
+def is_palindrome(s):
+    return s == s[::-1]
+
+text = input("Введіть рядок для перевірки: ")
+if is_palindrome(text):
+    print(f"Рядок '{text}' є паліндромом.")
+else:
+    print(f"Рядок '{text}' не є паліндромом.")
