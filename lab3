@@ -1,4 +1,7 @@
+import re
+
 def is_palindrome(s):
+    s = re.sub(r'[^A-Za-zА-Яа-яІіЇїЄєҐґ]+', '', s).lower()
     return s == s[::-1]
 
 text = input("Введіть рядок для перевірки: ")
